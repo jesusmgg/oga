@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Walls
+  - Turret
+  - Bullet
+  - Enemy
+  - Planet
+  - PlanetEnemy
+  - Iron
+  - Fluoride
+  - Gas
+  - cam1
+  - cam2
+  - cam3
+  - cam4
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Walls
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Player 1 Camera
+  - Player 2 Camera
+  - Player 3 Camera
+  - Player 4 Camera
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

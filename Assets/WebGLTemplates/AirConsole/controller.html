@@ -1,0 +1,79 @@
+<html>
+<head>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="AirController/css/AirController.css">
+    <link rel="stylesheet" type="text/css" href="AirController/css/style.css">
+    <style>
+        body {
+            color: white;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 30px;
+        }
+        h1 {
+            text-align: center;
+            vertical-align: middle;
+            line-height: 100vh;
+            font-size: 30px;
+        }
+        .player0 #Gameplay {
+            background-color: #cbff50
+        }
+        .player1 #Gameplay {
+            background-color: #ff6775
+        }
+        .btn-50 .btn {
+            float: left;
+            width: 100vw;
+            height: 50vh;
+            line-height: 50vh;
+        }           
+    </style>
+
+    <script type="text/javascript" src="https://www.airconsole.com/api/airconsole-latest.js"></script>
+    <script src="AirController/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="AirController/js/hammer.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="AirController/js/AirController.js"></script>
+</head>
+
+<body class="">
+
+<div id="Loading" air-page="Loading" class="page">
+    <h1>Loading...</h1>
+</div>
+
+<div id="Gameplay" air-page="Gameplay" class="page btn-50">
+    <div id="DPad">
+        <div id="DPadUp" class="dpad-arrow dpad-arrow-up" air-hold-btn="DPadUp"></div>
+        <div id="DPadDown" class="dpad-arrow dpad-arrow-down" air-hold-btn="DPadDown"></div>
+        <div id="DPadLeft" class="dpad-arrow dpad-arrow-left" air-hold-btn="DPadLeft"></div>
+        <div id="DPadRight" class="dpad-arrow dpad-arrow-right" air-hold-btn="DPadRight"></div>
+    </div>    
+    
+    <button id="BuildButton" class="button" air-hold-btn="BuildButton" air-data="build">Build</button>
+    <h2 id="ShieldsInfo" class="info" air-data="shields">Shields: 100%</h2>
+    <h2 id="IronInfo" class="info" air-data="iron">Iron: 5</h2>
+    <h2 id="GasInfo" class="info" air-data="gas">Gas: 10</h2>
+    <h2 id="FluorideInfo" class="info" air-data="fluoride">Fluoride: 0</h2>
+    <h2 id="StorageInfo" class="info" air-data="storage">Storage: 0</h2>
+</div>
+
+<div id="Full" air-page="Full" class="page">
+    <h1>All players claimed</h1>
+</div>
+
+<script>
+        controller.init("Loading", AirConsole.ORIENTATION_LANDSCAPE, true);
+
+        controller.onData = function (customData)
+        {
+            console.log("onData: ");
+            console.log(customData);
+        };
+        
+        controller.onShowPage = function (newPage) { console.log("onShowPage "); console.log(newPage); };
+        controller.onBecameHero = function () {};
+</script>
+
+</body>
+</html>
